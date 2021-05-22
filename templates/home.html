@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+   <title>Globalmovies</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Welcome to Movie DB</h1>
+    <br>
+    <form method="POST">
+      	<div>Movie:
+          <input type="text" placeholder="Enter movie" name="movie" id="movie">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </div>      
+    </form>
+    <br>
+    {% if movie %}
+      <div><h4>Search Results for {{ movie }} :</h4></div>
+      <br>
+    {% for film in movies %}
+    <a href="/details/{{film.imdbID}}" style="text-decoration: none">
+      <table>
+        <tr>
+          <td>
+            <img src={{film.Poster}} alt="this image cannot be displayed"/></td>
+          <td>          
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                {{ film.Title }}</h5>
+              <div style="margin: 10px;"><h6>Year:{{ film.Year }}</h6></div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>    
+    </a>      
+          <br>
+    {% endfor %}
+    {% endif %}    
+{% endblock%}

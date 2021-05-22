@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>{{movie.Title}}</title>
+{% endblock %}
+
+{% block body %}
+    <img class='detimg' src={{movie.Poster}} alt="this image cannot be displayed"/>
+    <div><h6>Title :</h6>{{ movie.Title }}</div> <hr>
+    <div><h6>Year :</h6>{{ movie.Year }}</div> <hr>
+    <div><h6>Rated :</h6>{{ movie.Rated }}</div> <hr>
+    <div><h6>Released :</h6>{{ movie.Released }}</div><hr> 
+    <div><h6>Runtime :</h6>{{ movie.Runtime }}></div><hr>
+    <div><h6>Genre :</h6><p>{{ movie.Genre }}</p></div> <hr>
+    <div><h6>Director :</h6>{{ movie.Director }}</div> <hr>
+    <div><h6>Writer :</h6><p>{{ movie.Writer }}</p></div> <hr>
+    <div><h6>Actors :</h6><p>{{ movie.Actors }}</p></div> <hr>
+    <div><h6>Plot :</h6><p>{{ movie.Plot }}</p></div>  <hr>
+    <div><h6>Language :</h6>{{ movie.Language }}</div> <hr>
+    <div><h6>Country :</h6>{{ movie.Country }}</div> <hr>
+    <div><h6>Awards :</h6>{{ movie.Awards }}</div> <hr>
+    <div><h6>BoxOffice :</h6>{{ movie.BoxOffice }}</div><hr> 
+    <div><h6>Production :</h6>{{ movie.Production }}</div> <hr>
+    <a href="/" class="btn btn-primary">back to home page</a>
+    <br>
+    <br>
+{% endblock%}
