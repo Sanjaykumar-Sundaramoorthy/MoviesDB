@@ -1,2 +1,7 @@
-flask
+Flask
+Jinja2
+MarkupSafe
 requests
+urllib3
+Werkzeug
+gunicorn
